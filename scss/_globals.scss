@@ -1,0 +1,68 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+//@font-face {
+//  font-family: 'Crimson Text';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Crimson Text'), local('CrimsonText-Roman'), url(http://fonts.gstatic.com/s/crimsontext/v6/3IFMwfRa07i-auYR-B-zNaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+//}
+//@font-face {
+//  font-family: 'Crimson Text';
+//  font-style: normal;
+//  font-weight: 700;
+//  src: local('Crimson Text Bold'), local('CrimsonText-Bold'), url(http://fonts.gstatic.com/s/crimsontext/v6/rEy5tGc5HdXy56Xvd4f3IxAPw1J91axKNXP_-QX9CC8.woff) format('woff');
+//}
+//@font-face {
+//  font-family: 'Crimson Text';
+//  font-style: italic;
+//  font-weight: 400;
+//  src: local('Crimson Text Italic'), local('CrimsonText-Italic'), url(http://fonts.gstatic.com/s/crimsontext/v6/a5QZnvmn5amyNI-t2BMkWL52ooqJRs02xO3mONBoqeI.woff) format('woff');
+//}
+//@font-face {
+//  font-family: 'Rock Salt';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Rock Salt'), local('RockSalt'), url(http://fonts.gstatic.com/s/rocksalt/v6/Q94aHXFHGip10K5uxi1jOLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+//}
+
+
+
+
+@mixin body-font-regular {
+  font-family: "alverata-informal-pe",sans-serif;
+font-style: normal;
+font-weight: 300;
+}
+
+@mixin body-font-bold {
+   font-family: "alverata-informal-pe",sans-serif;
+font-style: normal;
+font-weight: 500;
+    
+}
+
+@mixin headline-font {
+  font-family: "coquette",fantasy;
+font-style: normal;
+font-weight: 300;
+}
+
+
+$color: #242424;
+$color-title: #c45353;
+$background-color: #ffffff;
